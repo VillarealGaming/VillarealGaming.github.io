@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+@font-face {
+  font-family: "My Bauhaus";
+  src: url("Bauhaus-93.ttf");
+}
+body, html {
+    height: 100%;
+    font-family: "calibri";
+    font-weight: lighter;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/banner.png");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+.RY{
+  font-size: 400px;
+  font-family: "My Bauhaus";
+  line-height: 27.5px;
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  cursor: default;
+  text-shadow: 0px 0px 1px black;
+}
+.RY small{
+  font-size: 40px;
+  font-family: "My Bauhaus";
+}
+ span.w3-tag{
+  background-color: rgba(0,0,0,0.7);
+  font-size: 20px;
+}
+
+p{
+  font-size: 20px;
+  line-height: 24px;
+}
+header h4{
+  font-family: "Tahoma";
+}
+div.detalles{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+img.esrb{
+  width: 80%;
+  padding-top: 5%;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">Inicio</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#gallery" class="w3-button w3-block w3-black">Galería</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">Detalles del juego</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">Como se hizo</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <p class="w3-text-white RY">RY<small><br>REPEAT YOURSELF</small></p>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+
+<br>
+
+<!-- galería Container -->
+<div class="w3-container" id="gallery">
+  <div class="w3-content w3-card-2" style="max-width:800px">
+    <header class="w3-container w3-blue w3-text-white"><h4>Galería</h4></header>
+    <div class="w3-content w3-display-container">
+      <iframe class="mySlides" width="800" height="450" src="https://www.youtube.com/embed/o5QnQs4Efus" frameborder="0" allowfullscreen></iframe>
+      <img class="mySlides" src="img/screenshot1.png" style="width:100%; height: 450px">
+      <img class="mySlides" src="img/screenshot2.png" style="width:100%; height: 450px">
+      <img class="mySlides" src="img/screenshot3.png" style="width:100%; height: 450px">
+      <img class="mySlides" src="img/screenshot4.png" style="width:100%; height: 450px">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <div class="w3-container">
+    <h3>Coopera contigo mismo y supera todo tipo de desafíos</h3>
+      <p>
+      El nombre clave es RY, un robot automata capaz de aprender por si mismo. Aparte de tener dominar sus habilidades motrices para pasar por plataformas deberá de aprender a poder usar su mecanismo más poderoso, el sistema de auto-iteración, el cual le permite replicarse a sí mismo para completar tareas que no podría realizar por sí solo. 
+      </p> 
+      <p>
+      Cooperar contigo mismo jamas fue tan primordial. Avanza por los obstaculos obteniendo tu propia ayuda del pasado, juega, experimenta y repitete a ti mismo para progresar por todo tipo de pruebas.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content w3-card-2" style="max-width:800px">
+    <header class="w3-container w3-blue w3-text-white"><h4>Detalles del juego</h4></header>
+    <div class="detalles w3-container">
+      <p><strong>Plataforma- </strong>PC</p>
+      <p><strong>Número de jugadores- </strong>1 jugador</p>
+      <p><strong>Género- </strong>Puzzle, plataformas</p>
+      <p><strong>Desarrollador- </strong>V-Gaming</p>
+      <p><strong>Formato- </strong>Distribución digital</p>
+      <img class="esrb" src="img/esrb.png">
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- where Container -->
+<div class="w3-container" id="where">
+  <div class="w3-content w3-card-2" style="max-width:800px">
+    <header class="w3-container w3-blue w3-text-white"><h4>Como se hizo</h4></header>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/o5QnQs4Efus" frameborder="0" allowfullscreen></iframe>
+    <div class="w3-container">
+      <p>
+      RY es un juego de tipo puzzle-plataformas, en el cual, el jugador debe de superar una serie de acertijos para completar los niveles. Introduciendo una mécanica de juego innovadora, RY dispone de la habilidad de autoiteración, que conciste en repetir la serie de pasos del jugador cada vez que este reaparezca, ofreciendo un sinfin de posibilidades para completar una enigma.
+      Los acertijos se resuelven interactuando con el nivel para desbloquear el camino hasta la meta.
+      </p>
+      <p>
+      El jugador será capaz de resolver los acertijos de múltiples formas diferentes, ya que podrá controlar a más de un personaje, pero no al mismo tiempo, si no que podrá guardar una secuencia de acciones que será simulada por un clon, pudiendo crear tantas simulaciones como quiera.
+      </p>
+      <p>
+      El robot de pruebas tendrá a su disposición un arma de pulsos. Sin embargo, se necesita demasiada cantidad de energía para llevar a cabo un disparo, por lo que solo se podrá accionar una vez por reaparición.
+      </p>
+    </div>
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>

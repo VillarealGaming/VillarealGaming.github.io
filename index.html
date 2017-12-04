@@ -3,6 +3,8 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 @font-face {
@@ -11,21 +13,43 @@
 }
 body, html {
     height: 100%;
-    font-family: "calibri";
+    font-family: 'Dosis', sans-serif;
     font-weight: lighter;
+    /* background-color: rgb(48, 35, 35); */
+}
+.bodyimg{
+  position: fixed;
+  left: -10px;
+  bottom: -10px;
+  /* right: -10px; */
+  z-index: -1;
+
+  display: block;
+  background-image: url("img/background.jpg");
+  width: 110%;
+  height: 100vh;
+
+  filter: blur(5px) brightness(65%);
 }
 .bgimg {
     background-position: center;
     background-size: cover;
-    background-image: url("img/banner.png");
-    min-height: 75%;
+    background-image: url("img/logo.png");
+    min-height: 50%;
+}
+.img-logo{
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 70px;
 }
 .menu {
     display: none;
 }
 .RY{
   font-size: 400px;
-  font-family: "My Bauhaus";
+  /* font-family: "My Bauhaus"; */
   line-height: 27.5px;
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
@@ -35,7 +59,6 @@ body, html {
 }
 .RY small{
   font-size: 40px;
-  font-family: "My Bauhaus";
 }
  span.w3-tag{
   background-color: rgba(0,0,0,0.7);
@@ -43,11 +66,23 @@ body, html {
 }
 
 p{
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
 }
+p, h3{
+  color: rgb(231, 229, 229);
+}
+h3{
+  font-family: 'Dosis', sans-serif;
+}
 header h4{
-  font-family: "Tahoma";
+  font-size: 24px;
+  font-family: 'Abel', sans-serif;
+}
+header.w3-container{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: rgb(12, 49, 80);
 }
 div.detalles{
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
@@ -57,10 +92,16 @@ div.detalles{
 img.esrb{
   width: 80%;
   padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+div.w3-card-2{
+  background-color: rgba(73, 56, 56, 0.75);
+  border-radius: 8px;
 }
 </style>
 <body>
-
+<div class="bodyimg"></div>
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
@@ -80,20 +121,15 @@ img.esrb{
 </div>
 
 <!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-middle w3-center">
-    <p class="w3-text-white RY">RY<small><br>REPEAT YOURSELF</small></p>
-  </div>
+<header class="w3-display-container w3-grayscale-min" id="home">
+  <img class="img-logo" src="img/logo.png" alt="">
 </header>
-
 <!-- Add a background color and large text to the whole page -->
-
 <br>
-
 <!-- galería Container -->
 <div class="w3-container" id="gallery">
   <div class="w3-content w3-card-2" style="max-width:800px">
-    <header class="w3-container w3-blue w3-text-white"><h4>Galería</h4></header>
+    <header class="w3-container w3-text-white"><h4>Galería</h4></header>
     <div class="w3-content w3-display-container">
       <iframe class="mySlides" width="800" height="450" src="https://www.youtube.com/embed/o5QnQs4Efus" frameborder="0" allowfullscreen></iframe>
       <img class="mySlides" src="img/screenshot1.png" style="width:100%; height: 450px">
@@ -105,12 +141,11 @@ img.esrb{
       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
     </div>
     <div class="w3-container">
-    <h3>Coopera contigo mismo y supera todo tipo de desafíos</h3>
+    <h3>Prepárate para batallas sin iguales</h3>
       <p>
-      El nombre clave es RY, un robot automata capaz de aprender por si mismo. Aparte de tener dominar sus habilidades motrices para pasar por plataformas deberá de aprender a poder usar su mecanismo más poderoso, el sistema de auto-iteración, el cual le permite replicarse a sí mismo para completar tareas que no podría realizar por sí solo. 
-      </p> 
+        Tienes el control de tu propio automatón, un robot diseñado y equipado con las características más eficaces para lidiar las batallas más épicas, pero serás tú quien realice las maniobras necesarias para conseguir la victoria. Usa el arma de cañones gamma para deshacerte de tus oponentes, o bien recolecta los power-ups que se encuentran dispersos a lo largo del mapa y así mejorar las capacidades de tu automatón; aumento de velocidad, modificación de la cadencia de disparo; éstas y otras ventajas te permitirán dominar a tu enemigo y ganar la batalla.</p> 
       <p>
-      Cooperar contigo mismo jamas fue tan primordial. Avanza por los obstaculos obteniendo tu propia ayuda del pasado, juega, experimenta y repitete a ti mismo para progresar por todo tipo de pruebas.
+        Disfruta de los combates más épicos y emocionantes que Automaton Assault puede ofrecer. Sé parte de esta increíble competencia.
       </p>
     </div>
   </div>
@@ -120,11 +155,11 @@ img.esrb{
 <!-- About Container -->
 <div class="w3-container" id="about">
   <div class="w3-content w3-card-2" style="max-width:800px">
-    <header class="w3-container w3-blue w3-text-white"><h4>Detalles del juego</h4></header>
+    <header class="w3-container w3-text-white"><h4>Detalles del juego</h4></header>
     <div class="detalles w3-container">
       <p><strong>Plataforma- </strong>PC</p>
-      <p><strong>Número de jugadores- </strong>1 jugador</p>
-      <p><strong>Género- </strong>Puzzle, plataformas</p>
+      <p><strong>Número de jugadores- </strong>3 jugadores</p>
+      <p><strong>Género- </strong>Disparos, multijugador</p>
       <p><strong>Desarrollador- </strong>V-Gaming</p>
       <p><strong>Formato- </strong>Distribución digital</p>
       <img class="esrb" src="img/esrb.png">
@@ -136,18 +171,16 @@ img.esrb{
 <!-- where Container -->
 <div class="w3-container" id="where">
   <div class="w3-content w3-card-2" style="max-width:800px">
-    <header class="w3-container w3-blue w3-text-white"><h4>Como se hizo</h4></header>
+    <header class="w3-container w3-text-white"><h4>Como se hizo</h4></header>
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/o5QnQs4Efus" frameborder="0" allowfullscreen></iframe>
     <div class="w3-container">
       <p>
-      RY es un juego de tipo puzzle-plataformas, en el cual, el jugador debe de superar una serie de acertijos para completar los niveles. Introduciendo una mécanica de juego innovadora, RY dispone de la habilidad de autoiteración, que conciste en repetir la serie de pasos del jugador cada vez que este reaparezca, ofreciendo un sinfin de posibilidades para completar una enigma.
-      Los acertijos se resuelven interactuando con el nivel para desbloquear el camino hasta la meta.
+        Automaton Assault, es un juego desarrollado empleando la combinación de diferentes tecnologías, todas ellas usadas en armonía para lograr ofrecer una experiencia de juego única. 
       </p>
       <p>
-      El jugador será capaz de resolver los acertijos de múltiples formas diferentes, ya que podrá controlar a más de un personaje, pero no al mismo tiempo, si no que podrá guardar una secuencia de acciones que será simulada por un clon, pudiendo crear tantas simulaciones como quiera.
-      </p>
+        En seguida se brinda más detalle sobre el software usado en producción; para los gráficos en dos dimensiones fueron requeridos programas de manipulación de imágenes, usandose así Paint.net y Photoshop; para los gráficos en tres dimensiones y animaciones se empleó Autodesk Maya; Por último, fue elegido Unreal Engine 4 como motor de juego por su excelente calidad visual y facilidades de desarrollo.</p>
       <p>
-      El robot de pruebas tendrá a su disposición un arma de pulsos. Sin embargo, se necesita demasiada cantidad de energía para llevar a cabo un disparo, por lo que solo se podrá accionar una vez por reaparición.
+        El juego es de modalidad de disparos, en él los jugadores podrán competir unos con los otros. Para ganar la partida se deberan conseguir la cantidad de puntos correspondiente, dependera del jugador como conseguir esos puntos, ya sea por eliminación de enemigos o control de la zona. El mapa de juego cuenta con diferentes power-ups para agregar más dinamismo y emoción a los encuentros.
       </p>
     </div>
 </div>
